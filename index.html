@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nico von Eckartsberg</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="leftHeader">
+        <a href="#banner" class="title">Nico von Eckartsberg</a>
+      </div>
+      <div class="rightHeader">
+        <ul>
+          <li><a href="#aboutMe" class="headerButton">About Me</a></li>
+          <li><a href="#groups" class="headerButton">Groups</a></li>
+          <li><a href="#projects" class="headerButton">Projects</a></li>
+          <li><a href="#skills" class="headerButton">Skills</a></li>
+          <li><a href="#programming" class="headerButton">Programming</a></li>
+        </ul>
+      </div>
+    </header>
+    <section class="banner" id="banner">
+      <div class="mainProfile">
+        <img src="images/profile.jpg" alt="Logo" class="image" />
+        <h1 class="title">Nico von Eckartsberg</h1>
+      </div>
+    </section>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 50);
+      });
+    </script>
+    <section class="main" id="aboutMe">
+      <h1 class="title">About Me</h1>
+      <p class="bodyText">
+        I am an 11th grade student from San Francisco, California and I
+        currently attend Phillips Academy. I am fascinated with space and
+        engineering, and hope to pursue a career in aerospace engineering. I
+        enjoy challenging myself to learn new skills and expand the horizons of
+        my abilities. I also love playing sports and staying active. I play
+        soccer, volleyball, and I ski. I love combining my love of making and
+        sports with projects like my climbing wall or bike.
+      </p>
+    </section>
+    <section class="main" id="groups">
+      <h1 class="title">Experiences/Organizations</h1>
+      <div class="grid">
+        <div class="smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/ABlogoNewColor-44559.png"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">ACES</h1>
+          <p class="boxText">
+            I am President of Andover Competitive Engineering Society, a team
+            competing in the Real World Design Challenge and the F1 in Schools
+            competition.
+          </p>
+        </div>
+        <div class="smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/astrologo.png"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">Astronomy Club</h1>
+          <p class="boxText">
+            As a Co-President, I organize and lead meetings and observing open
+            houses in the Phillips Academy Observatory.
+          </p>
+        </div>
+        <div class="smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/PASClogo.jpeg"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">Divest Andover</h1>
+          <p class="boxText">
+            I am a member of Divest Andover, a student-run coalition advocating
+            for Phillips Academy's divestment from fossil fuels.
+          </p>
+        </div>
+        <div class="smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/PAlogo.png"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">Student Leadership</h1>
+          <p class="boxText">
+            As a dorm proctor and member of the Andover Admissions Ambassadors,
+            I am responsible for assisting the house counseling team and the
+            admissions department.
+          </p>
+        </div>
+        <div class="smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/MCDSlogo.jpeg"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">Systems Admin/Technician</h1>
+          <p class="boxText">
+            I have worked for 4 years in the Marin Country Day School Tech
+            Department, assisting in hardware/software setup/support and network
+            upgrades.
+          </p>
+        </div>
+        <div class="smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/wonderlablogo.jpeg"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">Summer Camp Experience</h1>
+          <p class="boxText">
+            I was the youngest Junior Counselor at "The X Kids" and a counselor
+            at "Wonderlab," maker-oriented camps promoting STEAM education.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="main" id="projects">
+      <div class="projectHeader">
+        <a class="prev slideButton" onclick="plusSlides(-1)">&#10094;</a>
+        <h1 class="title">Projects</h1>
+        <a class="next slideButton" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <div class="allProjects" id="allProjects">
+        <div class="project" id="project1">
+          <h1 class="projectTitle">Astronomy</h1>
+          <p class="bodyText">
+            These are some images from my Astronomy class in the fall of 2021. I
+            am currently taking Astronomy Research in which I am studying the
+            variable star "AE UMa" and the asteroid "5889 Mickiewicz."
+          </p>
+          <div class="imageGrid">
+            <img src="images/Astronomy/IMG_2848.JPG" class="projectImage" />
+            <img src="images/Astronomy/IMG_2849.JPG" class="projectImage" />
+            <img src="images/Astronomy/IMG_2982.jpeg" class="projectImage" />
+            <img src="images/Astronomy/IMG_3698.jpeg" class="projectImage" />
+          </div>
+        </div>
+
+        <div class="project" id="project2">
+          <h1 class="projectTitle">Bike Build</h1>
+          <p class="bodyText">
+            With the help of a coworker who spend a lot of time around bikes, I
+            built myself a gravel bike in the summer of 2020.
+          </p>
+          <div class="imageGrid">
+            <img src="images/Bike/bike1.jpeg" class="projectImage" />
+            <img src="images/Bike/bike2.jpeg" class="projectImage" />
+            <img src="images/Bike/bike3.jpeg" class="projectImage" />
+            <img src="images/Bike/bike4.jpeg" class="projectImage" />
+            <img src="images/Bike/bike5.jpeg" class="projectImage" />
+            <img src="images/Bike/bike6.jpeg" class="projectImage" />
+          </div>
+        </div>
+
+        <div class="project" id="project3">
+          <h1 class="projectTitle">Climbing Wall</h1>
+          <p class="bodyText">
+            My grandfather and I built this climbing wall, exploring woodworking
+            techniques and as a learning experience for me.
+          </p>
+          <div class="imageGrid">
+            <img src="images/ClimbingWall/IMG_0892.jpeg" class="projectImage" />
+            <img src="images/ClimbingWall/IMG_0872.jpeg" class="projectImage" />
+            <img src="images/ClimbingWall/IMG_0865.jpeg" class="projectImage" />
+          </div>
+        </div>
+
+        <div class="project" id="project4">
+          <h1 class="projectTitle">Workbench</h1>
+          <p class="bodyText">
+            I recently built this workbench as a replacement and upgrade for my
+            old one. It is built entirely from plywood sheets and can either be
+            stationary or mobile.
+          </p>
+          <div class="imageGrid">
+            <img src="images/Workbench/IMG_0631.jpeg" class="projectImage" />
+            <img src="images/Workbench/IMG_0632.jpeg" class="projectImage" />
+            <img src="images/Workbench/IMG_0633.jpeg" class="projectImage" />
+            <img src="images/Workbench/IMG_0634.jpeg" class="projectImage" />
+            <img src="images/Workbench/IMG_0645.jpeg" class="projectImage" />
+            <img src="images/Workbench/IMG_0646.jpeg" class="projectImage" />
+          </div>
+        </div>
+
+        <div class="project" id="project5">
+          <h1 class="projectTitle">ACES F1 in Schools Car</h1>
+          <p class="bodyText">
+            This is the car I worked on the design and build of for the F1 in
+            Schoools competition. The 2019/2020 car is completed and raced the
+            the second fastest time at the national competition. I designed and
+            built the 2021/2022 car, currently in assembly.
+          </p>
+          <div class="imageGrid">
+            <img src="images/ACES/IMG_1604.JPG" class="projectImage" />
+            <img src="images/ACES/IMG_1606.JPG" class="projectImage" />
+            <img src="images/ACES/IMG_1658.JPG" class="projectImage" />
+            <img src="images/ACES/IMG_0082.PNG" class="projectImage" />
+            <img src="images/ACES/IMG_2549.jpeg" class="projectImage" />
+            <img src="images/ACES/IMG_2684.jpeg" class="projectImage" />
+          </div>
+        </div>
+
+        <div class="project" id="project6">
+          <h1 class="projectTitle">3D Printing</h1>
+          <p class="bodyText">
+            Over the past few years I have been exploring 3D printing. I printed
+            a magnetically-attached SpaceX Raptor engine and more recently
+            assembled my own Prusa i3 MK3S+ 3D printer.
+          </p>
+          <div class="imageGrid">
+            <img src="images/3D Printing/IMG_1852.JPG" class="projectImage" />
+            <img src="images/3D Printing/IMG_4658.jpeg" class="projectImage" />
+            <img src="images/3D Printing/IMG_2175.jpeg" class="projectImage" />
+            <img src="images/3D Printing/IMG_1851.jpeg" class="projectImage" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript">
+      let index = 1;
+      showSlides(index);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((index += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((index = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let projects = document.getElementsByClassName("project");
+        if (n > projects.length) {
+          index = 1;
+        }
+        if (n < 1) {
+          index = projects.length;
+        }
+        for (i = 0; i < projects.length; i++) {
+          projects[i].style.display = "none";
+        }
+        projects[index - 1].style.display = "flex";
+      }
+
+      // This switches slides if arrow keys are pressed
+      document.onkeydown = function (e) {
+        switch (e.keyCode) {
+          case 37:
+            plusSlides(-1);
+            break;
+          case 39:
+            plusSlides(1);
+            break;
+        }
+      };
+    </script>
+    <section class="main" id="skills">
+      <h1 class="title">Skills</h1>
+      <div class="grid skillsGrid">
+        <div class="skillBox smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/fusion360logo.png"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">Autodesk Fusion 360</h1>
+          <p class="boxText">CAD Software</p>
+        </div>
+
+        <div class="skillBox smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/onshapelogo.jpeg"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">Onshape</h1>
+          <p class="boxText">CAD Software</p>
+        </div>
+
+        <div class="skillBox smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/simscale logo.png"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">Simscale</h1>
+          <p class="boxText">CFD Software</p>
+        </div>
+
+        <div class="skillBox smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/flowdesignlogo.jpeg"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">Autodesk Flow Design</h1>
+          <p class="boxText">CFD Software</p>
+        </div>
+
+        <div class="skillBox smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/merakilogo.png"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">Cisco Meraki</h1>
+          <p class="boxText">Network Management Software</p>
+        </div>
+
+        <div class="skillBox smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/zendesklogo.png"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">Zendesk for Service</h1>
+          <p class="boxText">Help Desk Ticket software</p>
+        </div>
+      </div>
+    </section>
+    <section class="main" id="programming">
+      <h1 class="title">Programming</h1>
+      <div class="grid">
+        <div class="skillBox smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/javalogo.png"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">Java</h1>
+        </div>
+
+        <div class="skillBox smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/pythonlogo.png"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">Python</h1>
+        </div>
+
+        <div class="skillBox smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/html5logo.png"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">HTML</h1>
+        </div>
+
+        <div class="skillBox smallBox">
+          <img
+            class="smallLogo"
+            src="images/Logos/css3logo.jpeg"
+            width="auto"
+            height="75"
+            alt="Logo"
+          />
+          <h1 class="subtitle">CSS</h1>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <ul>
+        <li>
+          <a
+            href="https://www.instagram.com/nicovoneck"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="images/social/Instagram_Glyph_White.png"
+              class="socialPhoto"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/nicovoneck"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="images/social/2021 Twitter logo - white.png"
+              class="socialPhoto"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/nico-von-eckartsberg-41a9a9229"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="images/social/In-White-48px-R.png" class="socialPhoto" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

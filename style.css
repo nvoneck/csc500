@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+:root {
+  --light: #e5e5e5;
+  --dark: #222222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--dark);
+  min-height: 200vh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 100px;
+  z-index: 100000;
+}
+
+header.sticky {
+  padding: 10px 100px;
+  background: var(--light);
+}
+
+header .title {
+  position: relative;
+  font-weight: 700;
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+  margin: 12px;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: no-wrap;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+.headerButton {
+  position: relative;
+  text-decoration: none;
+  color: var(--dark);
+  padding: 27px;
+  padding-left: 36px;
+  padding-right: 36px;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
+}
+
+.headerButton:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(images/homeImage.jpeg);
+  background-size: cover;
+}
+
+header .sticky .headerButton,
+header .sticky .title {
+  color: var(--light);
+}
+
+.leftHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 16px;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  color: var(--light);
+  /* opacity: 0; */
+  transition: 0.6s;
+}
+
+.bodyText {
+  max-width: 650px;
+  line-height: 1.5em;
+  margin: 25px;
+  text-align: center;
+}
+
+.mainProfile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding-top: 13%;
+  color: var(--light);
+}
+
+.mainProfile img {
+  border-radius: 50%;
+  width: 225px;
+  height: 225px;
+}
+
+.mainProfile h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 25px;
+  color: var(--dark);
+}
+
+.grid {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.skillsGrid {
+  max-width: 1000px;
+}
+
+.smallBox {
+  height: 275px;
+  width: 400px;
+  padding: 25px;
+  background-color: var(--light);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 25px;
+}
+
+.skillBox {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle {
+  color: var(--dark);
+  text-align: center;
+}
+
+.boxText {
+  max-width: 650px;
+  line-height: 1.5em;
+  color: var(--dark);
+  text-align: center;
+  margin-top: 15px;
+}
+
+.smallLogo {
+  margin-bottom: 15px;
+}
+
+.allProjects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+}
+
+.slideButton {
+  cursor: pointer;
+  padding: 16px;
+  color: var(--light);
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.prev {
+  position: absolute;
+  left: 35%;
+}
+
+.next {
+  position: absolute;
+  right: 35%;
+}
+
+.prev:hover,
+.next:hover {
+  opacity: 0.75;
+}
+
+.project {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectImage {
+  height: 350px;
+  width: auto;
+  margin: 25px;
+  margin-top: 15px;
+}
+
+.imageGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  margin-top: 8px;
+}
+
+.title {
+  color: var(--light);
+  font-size: 2em;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.projectTitle {
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-bottom: -15px;
+  margin-top: 10px;
+}
+
+footer ul {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialPhoto {
+  height: 32px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}

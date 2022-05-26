@@ -32,20 +32,19 @@ nav {
 }
 
 nav.sticky {
-  padding: 10px 100px;
+  padding: 20px 100px;
   background: var(--light);
 }
 
 header .title {
   position: relative;
-  font-weight: 700;
+  font-weight: 900;
   color: var(--dark);
   text-decoration: none;
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.6s;
-  margin: 12px;
   text-align: center;
 }
 
@@ -67,7 +66,7 @@ header ul li {
   position: relative;
   text-decoration: none;
   color: var(--dark);
-  padding: 27px;
+  padding: 25px;
   padding-left: 36px;
   padding-right: 36px;
   letter-spacing: 2px;
@@ -86,6 +85,9 @@ header ul li {
   height: 100vh;
   background: url(images/homeImage.jpeg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center, 0px;
 }
 
 nav.sticky .headerButton,
@@ -101,7 +103,7 @@ nav.sticky .headerButton:hover {
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: 24px;
+  padding-left: -16px;
   padding-right: 16px;
 }
 
@@ -119,7 +121,7 @@ nav.sticky .headerButton:hover {
 }
 
 .bodyText {
-  max-width: 650px;
+  max-width: min(650px, 75%);
   line-height: 1.5em;
   margin: 25px;
   text-align: center;
@@ -132,25 +134,25 @@ nav.sticky .headerButton:hover {
   align-items: center;
   width: 100%;
   height: 100vh;
-  padding-top: 13%;
+  padding-top: max(175px, 13%);
   color: var(--light);
 }
 
 .mainProfile img {
   border-radius: 50%;
-  width: 225px;
-  height: 225px;
+  width: min(225px, 40%);
+  height: min(225px, auto);
 }
 
 .mainProfile h1 {
   font-size: 2em;
   font-weight: 700;
   margin-top: 25px;
-  color: var(--dark);
+  text-align: center;
 }
 
 .grid {
-  max-width: 1350px;
+  max-width: max(90%, 1350px);
   position: relative;
   display: flex;
   flex-direction: row;
@@ -160,7 +162,7 @@ nav.sticky .headerButton:hover {
 }
 
 .skillsGrid {
-  max-width: 1000px;
+  max-width: max(90%, 1000px);
   position: relative;
   display: flex;
   flex-direction: row;
@@ -229,16 +231,8 @@ nav.sticky .headerButton:hover {
   -webkit-user-select: none;
   -o-user-select: none;
   user-select: none;
-}
-
-.prev {
-  position: absolute;
-  left: 35%;
-}
-
-.next {
-  position: absolute;
-  right: 35%;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 .prev:hover,
@@ -258,6 +252,7 @@ nav.sticky .headerButton:hover {
   width: auto;
   margin: 25px;
   margin-top: 15px;
+  margin-bottom: 35px;
 }
 
 .imageGrid {
@@ -293,6 +288,7 @@ footer ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 32px;
 }
 
 footer ul li {
@@ -320,22 +316,17 @@ footer ul li {
   background-color: var(--dark);
 }
 
-#shortTitle {
-  display: none;
-}
-
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1440px) {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 5rem;
+    top: 4.5rem;
     flex-direction: column;
     background-color: var(--light);
     width: 100%;
-    border-radius: 10px;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    display: none;
   }
 
   .nav-menu.active {
@@ -363,21 +354,7 @@ footer ul li {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  #fullTitle {
-    display: block;
-  }
-
-  #shortTitle {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 1440px) {
-  #fullTitle {
-    display: none;
-  }
-
-  #shortTitle {
-    display: block;
+  .mainProfile h1 {
+    font-size: 1.5em;
   }
 }

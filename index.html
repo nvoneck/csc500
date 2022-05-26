@@ -10,10 +10,7 @@
     <header>
       <nav class="navBar">
         <div class="leftHeader">
-          <a href="#banner" class="title" id="fullTitle"
-            >Nico von Eckartsberg</a
-          >
-          <a href="#banner" class="title" id="shortTitle">Nico</a>
+          <a href="#banner" class="title">Nico von Eckartsberg</a>
         </div>
         <div class="rightHeader">
           <ul class="nav-menu">
@@ -31,6 +28,32 @@
         </div>
       </nav>
     </header>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      const navBar = document.querySelector(".navBar");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        navBar.classList.add("sticky");
+      }
+
+      const navLink = document.querySelectorAll(".nav-link");
+
+      navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+      function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+
+      // window.addEventListener("scroll", function () {
+      //   closeMenu();
+      // });
+    </script>
     <section class="banner" id="banner">
       <div class="mainProfile">
         <img src="images/profile.jpg" alt="Logo" class="image" />
@@ -42,25 +65,6 @@
         var nav = document.querySelector("nav");
         nav.classList.toggle("sticky", window.scrollY > 50);
       });
-
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-menu");
-
-      hamburger.addEventListener("click", mobileMenu);
-
-      function mobileMenu() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-      }
-
-      const navLink = document.querySelectorAll(".nav-link");
-
-      navLink.forEach((n) => n.addEventListener("click", closeMenu));
-
-      function closeMenu() {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-      }
     </script>
     <section class="main" id="aboutMe">
       <h1 class="title">About Me</h1>
@@ -427,7 +431,7 @@
         <div class="skillBox smallBox">
           <img
             class="smallLogo"
-            src="images/Logos/css3logo.jpeg"
+            src="images/Logos/css3logo.png"
             width="auto"
             height="75"
             alt="Logo"

@@ -18,7 +18,7 @@ body {
   min-height: 200vh;
 }
 
-header {
+nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -31,7 +31,7 @@ header {
   z-index: 100000;
 }
 
-header.sticky {
+nav.sticky {
   padding: 10px 100px;
   background: var(--light);
 }
@@ -46,6 +46,7 @@ header .title {
   letter-spacing: 2px;
   transition: 0.6s;
   margin: 12px;
+  text-align: center;
 }
 
 header ul {
@@ -59,6 +60,7 @@ header ul {
 header ul li {
   position: relative;
   list-style: none;
+  white-space: nowrap;
 }
 
 .headerButton {
@@ -86,8 +88,12 @@ header ul li {
   background-size: cover;
 }
 
-header .sticky .headerButton,
-header .sticky .title {
+nav.sticky .headerButton,
+nav.sticky .title {
+  color: var(--dark);
+}
+
+nav.sticky .headerButton:hover {
   color: var(--light);
 }
 
@@ -298,4 +304,80 @@ footer ul li {
   width: auto;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--dark);
+}
+
+#shortTitle {
+  display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: var(--light);
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  header ul li {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #fullTitle {
+    display: block;
+  }
+
+  #shortTitle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  #fullTitle {
+    display: none;
+  }
+
+  #shortTitle {
+    display: block;
+  }
 }

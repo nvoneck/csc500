@@ -8,18 +8,28 @@
 
   <body>
     <header>
-      <div class="leftHeader">
-        <a href="#banner" class="title">Nico von Eckartsberg</a>
-      </div>
-      <div class="rightHeader">
-        <ul>
-          <li><a href="#aboutMe" class="headerButton">About Me</a></li>
-          <li><a href="#groups" class="headerButton">Groups</a></li>
-          <li><a href="#projects" class="headerButton">Projects</a></li>
-          <li><a href="#skills" class="headerButton">Skills</a></li>
-          <li><a href="#programming" class="headerButton">Programming</a></li>
-        </ul>
-      </div>
+      <nav class="navBar">
+        <div class="leftHeader">
+          <a href="#banner" class="title" id="fullTitle"
+            >Nico von Eckartsberg</a
+          >
+          <a href="#banner" class="title" id="shortTitle">Nico</a>
+        </div>
+        <div class="rightHeader">
+          <ul class="nav-menu">
+            <li><a href="#aboutMe" class="headerButton">About Me</a></li>
+            <li><a href="#groups" class="headerButton">Groups</a></li>
+            <li><a href="#projects" class="headerButton">Projects</a></li>
+            <li><a href="#skills" class="headerButton">Skills</a></li>
+            <li><a href="#programming" class="headerButton">Programming</a></li>
+          </ul>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
     </header>
     <section class="banner" id="banner">
       <div class="mainProfile">
@@ -29,9 +39,28 @@
     </section>
     <script type="text/javascript">
       window.addEventListener("scroll", function () {
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 50);
+        var nav = document.querySelector("nav");
+        nav.classList.toggle("sticky", window.scrollY > 50);
       });
+
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+
+      const navLink = document.querySelectorAll(".nav-link");
+
+      navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+      function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
     </script>
     <section class="main" id="aboutMe">
       <h1 class="title">About Me</h1>

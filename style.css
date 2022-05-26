@@ -144,6 +144,7 @@ header .sticky .title {
 }
 
 .grid {
+  max-width: 1350px;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -154,6 +155,12 @@ header .sticky .title {
 
 .skillsGrid {
   max-width: 1000px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
 }
 
 .smallBox {

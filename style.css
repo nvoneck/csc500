@@ -197,6 +197,11 @@ header .sticky .title {
 
 .smallLogo {
   margin-bottom: 15px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .allProjects {
@@ -213,7 +218,6 @@ header .sticky .title {
   font-weight: bold;
   font-size: 24px;
   transition: 0.6s ease;
-  user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;

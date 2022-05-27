@@ -28,7 +28,7 @@
         </div>
       </nav>
     </header>
-    <script>
+    <script type="text/javascript">
       const hamburger = document.querySelector(".hamburger");
       const navMenu = document.querySelector(".nav-menu");
       const navBar = document.querySelector(".navBar");
@@ -48,6 +48,7 @@
       function closeMenu() {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
+        navBar.classList.remove("sticky");
       }
 
       // window.addEventListener("scroll", function () {
